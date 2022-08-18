@@ -39,8 +39,9 @@ function onFromSubmit(event) {
     
     console.log(formData);
     if (formData.email !== '' && formData.password !== '') {
+        form.reset()
     } else {
         alert(`всі поля повинні бути заповнені`);
     }
-    form.reset()
+
 }

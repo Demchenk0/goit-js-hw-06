@@ -25,11 +25,15 @@ const myBody = document.querySelector('body');
 // }
 
 myButton.addEventListener('click', (event) => {
-  myBody.style.backgroundColor = getRandomHexColor();
-  mySpan.textContent = getRandomHexColor();
+    let color = getRandomHexColor();
+  myBody.style.backgroundColor = color;
+  mySpan.textContent = color;
+  myButton.style.backgroundColor = getRandomHexColor(); 
+  
 });
 
 function getRandomHexColor() {
+  
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 

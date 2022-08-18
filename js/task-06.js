@@ -11,7 +11,8 @@
 // Для додавання стилів використовуй CSS-класи valid і invalid, які ми вже додали у вихідні файли завдання.
 
 const newInput = document.querySelector('#validation-input');
-const dataLength = newInput.getAttribute('data-length')
+// const dataLength = newInput.getAttribute('data-length')
+
 
 // setTimeout(() => {
 // newInput.dataset.length = 8;
@@ -20,9 +21,9 @@ const dataLength = newInput.getAttribute('data-length')
 newInput.addEventListener('blur', onInputAll);
 
 function onInputAll(event) {
-    
+    const dataLength = newInput.getAttribute('data-length')
     console.log(event.target.value.length);
-    
+
     if (Number(dataLength) === event.target.value.length) {
         newInput.classList.remove('invalid')
         newInput.classList.add('valid')
